@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
+using AgileTickets.Web.Models;
 
 namespace Tests
 {
@@ -40,6 +41,14 @@ namespace Tests
             acumulador.Acumula(20);
             
             Assert.AreEqual(50, acumulador.ValorAcumulado);
+        }
+
+        [Test]
+        public void DeveVender2IngressosSeHa2Vagas() {
+            Sessao sessao = new Sessao();
+            sessao.TotalDeIngressos = 2;
+
+            Assert.IsTrue(sessao.PodeReservar(2));
         }
 
     }
