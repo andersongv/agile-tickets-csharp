@@ -51,6 +51,8 @@ namespace Tests
             Assert.IsTrue(sessao.PodeReservar(2));
         }
 
+
+
     }
 
     // A classe acumulador está aqui apenas para facilitar este exemplo.

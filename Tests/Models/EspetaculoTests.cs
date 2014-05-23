@@ -15,9 +15,9 @@ namespace Tests.Models
         {
             Espetaculo ivete = new Espetaculo();
 
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(1));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(3));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(2));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(1));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(3));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(2));
 
             Assert.IsTrue(ivete.Vagas(5));
         }
@@ -27,9 +27,9 @@ namespace Tests.Models
         {
             Espetaculo ivete = new Espetaculo();
 
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(1));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(3));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(2));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(1));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(3));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(2));
 
             Assert.IsTrue(ivete.Vagas(6));
         }
@@ -39,9 +39,9 @@ namespace Tests.Models
         {
             Espetaculo ivete = new Espetaculo();
 
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(1));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(3));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(2));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(1));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(3));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(2));
 
             Assert.IsFalse(ivete.Vagas(15));
         }
@@ -51,9 +51,9 @@ namespace Tests.Models
         {
             Espetaculo ivete = new Espetaculo();
 
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(3));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(3));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(4));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(3));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(3));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(4));
 
             Assert.IsTrue(ivete.Vagas(5, 3));
         }
@@ -63,9 +63,9 @@ namespace Tests.Models
         {
             Espetaculo ivete = new Espetaculo();
 
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(3));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(3));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(4));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(3));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(3));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(4));
 
             Assert.IsTrue(ivete.Vagas(10, 3));
         }
@@ -75,9 +75,9 @@ namespace Tests.Models
         {
             Espetaculo ivete = new Espetaculo();
 
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(2));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(2));
-            ivete.Sessoes.Add(SessaoComIngressosSobrando(2));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(2));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(2));
+            ivete.sessoes.Add(SessaoComIngressosSobrando(2));
 
             Assert.IsFalse(ivete.Vagas(5, 3));
         }
