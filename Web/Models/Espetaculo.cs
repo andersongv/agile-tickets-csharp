@@ -11,12 +11,12 @@ namespace AgileTickets.Web.Models
         public virtual int Id { get; set; }
         public virtual string Nome { get; set; }
         public virtual string Descricao { get; set; }
-        public virtual IList<Sessao> Sessoes { get; set; }
+        public virtual IList<Sessao> sessoes { get; set; }
         public virtual Estabelecimento Estabelecimento { get; set; }
 
         public Espetaculo()
         {
-            this.Sessoes = new List<Sessao>();
+            this.sessoes = new List<Sessao>();
         }
         /*
          * Esse metodo eh responsavel por criar sessoes para
@@ -37,6 +37,21 @@ namespace AgileTickets.Web.Models
         public virtual IList<Sessao> CriaSessoes(DateTime inicio, DateTime fim, Periodicidade periodicidade)
         {
             // ALUNO: Não apague esse metodo. Esse sim será usado no futuro! ;)
+            Sessao objSessao = new Sessao();
+
+            objSessao.Inicio = inicio;
+            objSessao.Fim = fim;
+
+            if (periodicidade == Periodicidade.DIARIA)
+            {
+
+            }
+            else
+            {
+            }
+
+            sessoes.Add(objSessao);
+
             return null;
         }
 
@@ -45,7 +60,7 @@ namespace AgileTickets.Web.Models
             // ALUNO: Não apague esse metodo. Esse sim será usado no futuro! ;)
             int totDisp = 0;
 
-            foreach (Sessao s in Sessoes)
+            foreach (Sessao s in sessoes)
             {
                 if (s.IngressosDisponiveis < min) return false;
                 totDisp += s.IngressosDisponiveis;
@@ -60,7 +75,7 @@ namespace AgileTickets.Web.Models
             // ALUNO: Não apague esse metodo. Esse sim será usado no futuro! ;)
             int totDisp = 0;
 
-            foreach (Sessao s in Sessoes)
+            foreach (Sessao s in sessoes)
             {
                 totDisp += s.IngressosDisponiveis;
             }
